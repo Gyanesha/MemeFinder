@@ -1,9 +1,8 @@
 # Meme Retrieval Engine
 
-[![Join the chat at https://gitter.im/MemeFinder/Lobby](https://badges.gitter.im/MemeFinder/Lobby.svg)](https://gitter.im/MemeFinder/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-Author: __Aniq Ur Rahman__ | @Aniq55
+[![Join the chat at https://gitter.im/NIT-dgp/General](https://badges.gitter.im/MemeFinder/Lobby.svg)](https://gitter.im/NIT-dgp/General)
 
-![Demo](memefinder.png)
+![Demo](docs/images/ss_flask.png)
 ## Project Description
 
 ### Technologies employed
@@ -81,12 +80,12 @@ sudo bash add.sh
 * renames the memes present in `raw` folder to a  unique hex digest generated filename and moves it to `processed` folder
 
 ### `ocr.py`
-* `extractText(image_path)`: extracts text using OCR from the meme at `image_path`
+* `extract_text(image_path)`: extracts text using OCR from the meme at `image_path`
 
 ### `search.py`
-* `generateQuery(query)`: Extends the query to include all synonyms related to the input query using nltk package
+* `generate_query(query)`: Extends the query to include all synonyms related to the input query using nltk package
 * `create_index(database)`: creates an dictionary (index) of all memes stored in the database, where the __filename__ is the `key` and the __associated text__ is the `value`
-* `getScore(INDEX, keywords)`: Creates a relevance based score list matched with the filenames in `INDEX` for the given `keywords`
+* `get_score(INDEX, keywords)`: Creates a relevance based score list matched with the filenames in `INDEX` for the given `keywords`
 * `load_index(index_name)`: Loads an index dictionary from `index_name` using `pickle` library
 
 ### `meme_gui_support.py`
